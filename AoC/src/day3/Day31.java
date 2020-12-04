@@ -22,7 +22,7 @@ public class Day31 {
 		int limitX = map.get(0).length() - 1;
 		int coordX = 0;
 		int coordY = 0;
-		int arvores = 0;
+		int nTrees = 0;
 
 		do {
 			coordX += 3;
@@ -34,12 +34,12 @@ public class Day31 {
 			}
 
 			if ("#".equals(String.valueOf(map.get(coordY).charAt(coordX)))) {
-				arvores++;
+				nTrees++;
 			}
 
 		} while (coordY < map.size() - 1);
 
-		System.out.println("Numero de arvores: " + arvores);
+		System.out.println("Number of trees: " + nTrees);
 
 	}
 

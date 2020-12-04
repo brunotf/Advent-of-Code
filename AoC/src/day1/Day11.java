@@ -20,13 +20,13 @@ public class Day11 {
 
 		br.close();
 
-		int produto = 0;
+		int product = 0;
 
 		for (Integer i : input) {
 			for (Integer j : input) {
 				if (i + j == 2020) {
-					produto = i * j;
-					System.out.printf("Number 1: %d\nNumber 2: %d\nProduct = %d\n", i, j, produto);
+					product = i * j;
+					System.out.printf("Number 1: %d\nNumber 2: %d\nProduct = %d\n", i, j, product);
 					System.exit(0);
 				}
 			}

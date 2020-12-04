@@ -10,32 +10,32 @@ public class Day22 {
 
 		String s = null;
 
-		int senhasvalidas = 0;
+		int validPw = 0;
 
-		String separador[] = new String[3];
+		String separator[] = new String[3];
 
 		while ((s = br.readLine()) != null) {
 
-			separador = s.split(" ");
+			separator = s.split(" ");
 
-			String limiar[] = new String[2];
-			limiar = separador[0].split("-");
-			int minimo = Integer.parseInt(limiar[0]);
-			int maximo = Integer.parseInt(limiar[1]);
+			String limit[] = new String[2];
+			limit = separator[0].split("-");
+			int lower = Integer.parseInt(limit[0]);
+			int max = Integer.parseInt(limit[1]);
 
-			char key = separador[1].charAt(0);
+			char key = separator[1].charAt(0);
 
-			char[] senha = separador[2].toCharArray();
+			char[] pw = separator[2].toCharArray();
 
-			if ((senha[minimo - 1] == key) != (senha[maximo - 1] == key)) {
-				senhasvalidas++;
+			if ((pw[lower - 1] == key) != (pw[max - 1] == key)) {
+				validPw++;
 			}
 
 		}
 
 		br.close();
 
-		System.out.println("Valid passwords: " + senhasvalidas);
+		System.out.println("Valid passwords: " + validPw);
 
 	}
 

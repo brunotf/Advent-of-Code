@@ -1,3 +1,2 @@
 INDEX VERSION 1.131+C:\GitHub\Advent-of-Code\.metadata\.plugins\org.eclipse.jdt.core
 2196199803.index
-3698847667.index

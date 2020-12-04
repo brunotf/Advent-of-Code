@@ -8,27 +8,29 @@ import java.util.LinkedList;
 public class Day32 {
 	public static void main(String[] args) throws IOException {
 
-		BufferedReader br = new BufferedReader(new FileReader("C:\\GitHub\\Advent-of-Code\\AoC\\src\\day3\\test"));
+		BufferedReader br = new BufferedReader(new FileReader("C:\\GitHub\\Advent-of-Code\\AoC\\src\\day3\\input"));
 
 		String s = null;
 
 		LinkedList<String> map = new LinkedList<String>();
-
-		int[] slopesR = { 1, 3, 5, 7, 1 };
-		int[] slopesD = { 1, 1, 1, 1, 2 };
 
 		while ((s = br.readLine()) != null) {
 			map.add(s);
 		}
 		br.close();
 
+		int[] slopesR = { 1, 3, 5, 7, 1 };
+		int[] slopesD = { 1, 1, 1, 1, 2 };
+
 		int limitX = map.get(0).length() - 1;
-		int coordX = 0;
-		int coordY = 0;
-		int arvores = 0;
-		int produto = 0;
+
+		int nTrees = 0;
+		int product = 1;
 
 		for (int i = 0; i < 5; i++) {
+
+			int coordX = 0;
+			int coordY = 0;
 
 			do {
 				coordX += slopesR[i];
@@ -40,16 +42,17 @@ public class Day32 {
 				}
 
 				if ("#".equals(String.valueOf(map.get(coordY).charAt(coordX)))) {
-					arvores++;
+					nTrees++;
 				}
 
 			} while (coordY < map.size() - 1);
 
-			produto *= arvores;
+			product *= nTrees;
+			nTrees = 0;
 
 		}
 
-		System.out.println("Numero de arvores: " + arvores);
+		System.out.println("Number of trees: " + product);
 
 	}
 

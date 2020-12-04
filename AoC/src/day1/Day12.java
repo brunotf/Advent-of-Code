@@ -20,14 +20,14 @@ public class Day12 {
 
 		br.close();
 
-		int produto = 0;
+		int product = 0;
 
 		for (Integer i : input) {
 			for (Integer j : input) {
 				for (Integer k : input) {
 					if (i + j + k == 2020) {
-						produto = i * j * k;
-						System.out.printf("Number 1: %d\nNumber 2: %d\nNumber 3: %d\nProduct = %d\n", i, j, k, produto);
+						product = i * j * k;
+						System.out.printf("Number 1: %d\nNumber 2: %d\nNumber 3: %d\nProduct = %d\n", i, j, k, product);
 						System.exit(0);
 					}
 				}
