@@ -1,0 +1,22 @@
+package day2;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Day21 {
+	public static void main(String[] args) throws IOException {
+
+		BufferedReader br = new BufferedReader(new FileReader("C:\\GitHub\\Advent-of-Code\\AoC\\src\\day2\\input.txt"));
+
+		String s = null;
+
+		while ((s = br.readLine()) != null) {
+
+		}
+
+		br.close();
+
+	}
+
+}

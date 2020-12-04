@@ -1,0 +1,43 @@
+package day3;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.LinkedList;
+
+public class Day31 {
+	public static void main(String[] args) throws IOException {
+
+		BufferedReader br = new BufferedReader(new FileReader("C:\\GitHub\\Advent-of-Code\\AoC\\src\\day3\\input"));
+
+		String s = null;
+
+		LinkedList<String> map = new LinkedList<String>();
+
+		int[][] slopes = { { 3 }, { 1 } };
+
+		while ((s = br.readLine()) != null) {
+			map.add(s);
+		}
+		br.close();
+
+		int limitX = map.get(0).length();
+		int coordX = 0;
+
+		for (int i = 0; i < map.size(); i += slopes[0][1]) {
+
+			coordX += slopes[0][0];
+
+			if (coordX > limitX) {
+				coordX = Math.abs(coordX - limitX);
+			}
+
+			if (String.valueOf(map.get(i).charAt(coordX)) == "#") {
+
+			}
+
+		}
+
+	}
+
+}

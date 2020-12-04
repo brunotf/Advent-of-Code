@@ -1,0 +1,38 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+//1721
+//979
+//366
+//299
+//675
+//1456
+
+public class Day11 {
+	public static void main(String[] args) throws IOException {
+
+		InputStreamReader ir = new InputStreamReader(System.in);
+		BufferedReader ler = new BufferedReader(ir);
+
+		int[] entrada = new int[6];
+
+		for (int i = 0; i < entrada.length; i++) {
+			entrada[i] = Integer.parseInt(ler.readLine());
+		}
+
+		int soma = 0;
+
+		for (int i = 0; i < entrada.length; i++) {
+			for (int j = 0; j < entrada.length; j++) {
+				if (entrada[i] + entrada[j] == 2020) {
+					soma = entrada[i] * entrada[j];
+				}
+			}
+		}
+
+		System.out.printf("Multiplying them together produces %d", soma);
+
+	}
+
+}

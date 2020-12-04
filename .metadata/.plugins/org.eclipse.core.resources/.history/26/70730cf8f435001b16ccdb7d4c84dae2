@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+
+//1721
+//979
+//366
+//299
+//675
+//1456
+
+public class Day11 {
+	public static void main(String[] args) throws IOException {
+
+		InputStreamReader ir = new InputStreamReader(System.in);
+		BufferedReader ler = new BufferedReader(ir);
+
+		// HashSet<Integer> entrada = new HashSet<Integer>();
+		
+		String entrada = ler.toString();
+		
+		Hash
+
+		System.out.printf("Multiplying them together produces %d\n", soma);
+
+	}
+
+}

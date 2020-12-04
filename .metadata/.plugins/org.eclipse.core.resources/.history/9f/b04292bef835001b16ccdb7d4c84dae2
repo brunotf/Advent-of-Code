@@ -1,0 +1,27 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+
+public class Day11 {
+	public static void main(String[] args) throws IOException {
+
+		InputStreamReader ir = new InputStreamReader(System.in);
+		BufferedReader ler = new BufferedReader(ir);
+
+		HashSet<String> entrada = new HashSet<String>();
+
+		while (ler.readLine() != null) {
+			entrada.add(ler.readLine());
+		}
+		
+		
+
+		int soma = 0;
+
+
+		System.out.printf("Multiplying them together produces %d\n", soma);
+
+	}
+
+}

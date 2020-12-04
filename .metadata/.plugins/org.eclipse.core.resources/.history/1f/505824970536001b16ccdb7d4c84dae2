@@ -1,0 +1,29 @@
+package day2;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.LinkedList;
+
+public class Day21 {
+	public static void main(String[] args) throws IOException {
+
+		BufferedReader br = new BufferedReader(new FileReader("C:\\GitHub\\Advent-of-Code\\AoC\\src\\day2\\input.txt"));
+
+		String s = null;
+
+		LinkedList<String> senha = new LinkedList<String>();
+
+		String sa[] = new String[3];
+
+		while ((s = br.readLine()) != null) {
+
+			senha.add(sa[3]);
+		}
+		
+		br.close();
+		
+		
+	}
+
+}
