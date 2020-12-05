@@ -14,42 +14,35 @@ public class Day41 {
 
 		StringBuffer sb = new StringBuffer();
 
-		LinkedList<String> passports = new LinkedList<String>();
+		int validPp = 0;
 
 		while ((s = br.readLine()) != null) {
 			sb.append(s + " ");
-			if (s.trim().isBlank()) {
-				passports.add(sb.toString());
+			if (s.isBlank()) {
+				String passport = "";
+				passport = sb.toString();
+
+				String byr = "byr";
+				String iyr = "iyr";
+				String eyr = "eyr";
+				String hgt = "hgt";
+				String hcl = "hcl";
+				String ecl = "ecl";
+				String pid = "pid";
+
+				if (passport.contains(byr) && (passport.contains(iyr)) && (passport.contains(eyr))
+						&& (passport.contains(hgt)) && (passport.contains(hcl)) && (passport.contains(ecl))
+						&& (passport.contains(pid))) {
+					validPp++;
+				}
+
 				sb.delete(0, sb.length());
+
 			}
+
 		}
+
 		br.close();
-
-		String byr = "byr";
-		String iyr = "iyr";
-		String eyr = "eyr";
-		String hgt = "hgt";
-		String hcl = "hcl";
-		String ecl = "ecl";
-		String pid = "pid";
-		String cid = "cid";
-
-		int validPp = 0;
-
-		for (String p : passports) {
-			if (p.contains(byr) 
-					&& (p.contains(iyr)) 
-					&& (p.contains(eyr)) 
-					&& (p.contains(hgt)) 
-					&& (p.contains(hcl))
-					&& (p.contains(ecl)) 
-					&& (p.contains(pid))) {
-				validPp++;
-			}
-		}
-		System.out.println(passports.getFirst());
-		
-		System.out.println(passports.getLast());
 
 		System.out.println("Valid passports: " + validPp);
 

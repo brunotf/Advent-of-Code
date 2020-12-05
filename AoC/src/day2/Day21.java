@@ -13,20 +13,14 @@ public class Day21 {
 
 		int validPw = 0;
 
-		String separator[] = new String[3];
-
 		while ((s = br.readLine()) != null) {
 
-			separator = s.split(" ");
+			int lower = Integer.parseInt(s.split(" ")[0].split("-")[0]);
+			int max = Integer.parseInt(s.split(" ")[0].split("-")[1]);
 
-			String limit[] = new String[2];
-			limit = separator[0].split("-");
-			int lower = Integer.parseInt(limit[0]);
-			int max = Integer.parseInt(limit[1]);
+			char validator = s.split(" ")[1].charAt(0);
 
-			char validator = separator[1].charAt(0);
-
-			char[] pw = separator[2].toCharArray();
+			char[] pw = s.split(" ")[2].toCharArray();
 
 			int keys = 0;
 
