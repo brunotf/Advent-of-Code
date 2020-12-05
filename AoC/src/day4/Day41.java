@@ -18,7 +18,7 @@ public class Day41 {
 
 		while ((s = br.readLine()) != null) {
 			sb.append(s + " ");
-			if (s.isBlank()) {
+			if (s.trim().isBlank()) {
 				passports.add(sb.toString());
 				sb.delete(0, sb.length());
 			}
@@ -37,12 +37,19 @@ public class Day41 {
 		int validPp = 0;
 
 		for (String p : passports) {
-			if (p.contains(byr) && (p.contains(iyr)) && (p.contains(eyr)) && (p.contains(hgt)) && (p.contains(hcl))
-					&& (p.contains(ecl)) && (p.contains(pid))) {
+			if (p.contains(byr) 
+					&& (p.contains(iyr)) 
+					&& (p.contains(eyr)) 
+					&& (p.contains(hgt)) 
+					&& (p.contains(hcl))
+					&& (p.contains(ecl)) 
+					&& (p.contains(pid))) {
 				validPp++;
 			}
-			System.out.println(p);
 		}
+		System.out.println(passports.getFirst());
+		
+		System.out.println(passports.getLast());
 
 		System.out.println("Valid passports: " + validPp);
 

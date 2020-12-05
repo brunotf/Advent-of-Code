@@ -8,7 +8,7 @@ import java.util.HashSet;
 public class Day11 {
 	public static void main(String[] args) throws IOException {
 
-		BufferedReader br = new BufferedReader(new FileReader("C:\\GitHub\\Advent-of-Code\\AoC\\src\\day1\\input.txt"));
+		BufferedReader br = new BufferedReader(new FileReader("C:\\GitHub\\Advent-of-Code\\AoC\\src\\day1\\input"));
 
 		HashSet<Integer> input = new HashSet<Integer>();
 
